@@ -23,16 +23,13 @@ class Terrenos extends CI_Controller
         $terrenos->set_subject('Terrenos');
         $terrenos->set_table('terrenos'); //estableciendo la tabla de l BDD
         $terrenos->set_theme('datatables'); //definiendo al aspeto grafico
-        $terrenos->columns('id_ter', 'provincia_ter', 'canton_ter', 'parroquia_ter', 'barrio_ter', 'direccion_ter', 'longitud_ter', 'latitud_ter');
+        $terrenos->columns('id_ter', 'provincia_ter', 'canton_ter', 'parroquia_ter', 'barrio_ter');
         $terrenos->display_as('id_ter', '#');
         $terrenos->display_as('provincia_ter', 'Provincia');
         $terrenos->display_as('canton_ter', 'Canton');
         $terrenos->display_as('parroquia_ter', 'Parroquia');
         $terrenos->display_as('barrio_ter', 'Barrio');
-        $terrenos->display_as('direccion_ter', 'Direccion');
-        $terrenos->display_as('longitud_ter', 'Longitud');
-        $terrenos->display_as('latitud_ter', 'Latitud');
-        $terrenos->fields('provincia_ter', 'canton_ter', 'parroquia_ter', 'barrio_ter', 'direccion_ter');
+        $terrenos->fields('provincia_ter', 'canton_ter', 'parroquia_ter', 'barrio_ter');
         $terrenos->set_language("spanish");
         $terrenos->set_theme("flexigrid");
 

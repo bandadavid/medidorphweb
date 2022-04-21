@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'webhosting2_medidorph',
-	'password' => 'NY;Gk((BGx22',
-	'database' => 'webhosting2_medidordeph',
+	'hostname' => 'remotemysql.com',
+	'username' => 'SE4ugiMJHo',
+	'password' => '1tz0LJXuJb',
+	'database' => 'SE4ugiMJHo',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -92,5 +92,6 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
-	'save_queries' => TRUE
+	'save_queries' => TRUE,
+	'dbport' => '3306'
 );

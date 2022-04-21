@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-12 text-center">
         <p>&copy;
-          <a target="_blank" href="https://www.youtube.com/channel/UCBXzVk8wvQnBw_EDoalcWLw">DESARROLADO POR UTC
+          <a target="_blank" href="https://www.utc.edu.ec/">DESARROLADO POR UTC
             <br>
             2022
           </a>
