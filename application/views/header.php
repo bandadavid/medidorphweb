@@ -114,8 +114,11 @@
                   <i class="fas fa-chart-area"></i>&nbsp;&nbsp;MEDICION&nbsp;&nbsp;
                 </a>
                 <div class="dropdown-menu">
+                  <a href="<?php echo site_url('lugares/gestionLugares'); ?>" class="dropdown-item">
+                    <i class="fas fa-object-group"></i>&nbsp;&nbsp;Localidad&nbsp;&nbsp;
+                  </a>
                   <a href="<?php echo site_url('terrenos/gestionTerrenos'); ?>" class="dropdown-item">
-                    <i class="fas fa-object-group"></i>&nbsp;&nbsp;Terrenos&nbsp;&nbsp;
+                    <i class="fa fa-object-group"></i>&nbsp;&nbsp;Terrenos&nbsp;&nbsp;
                   </a>
                 </div>
               </div>

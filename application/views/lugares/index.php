@@ -19,7 +19,7 @@ foreach ($css_files as $file) : ?>
     <div class="col-md-12">
         <h3 class="text-center" style="color:#1D1A49;">
             <i class="fas fa-object-group"></i>
-            GESTIÓN DE TERRENOS
+            GESTIÓN DE LOCALIDAD
         </h3>
         <br>
         <?php echo $output; ?>

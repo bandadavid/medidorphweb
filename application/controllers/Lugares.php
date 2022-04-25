@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Terrenos extends CI_Controller
+class Lugares extends CI_Controller
 {
 
     function __construct()
@@ -9,7 +9,7 @@ class Terrenos extends CI_Controller
         parent::__construct(); //invocando al constructor de la clase padre
         $this->load->database(); //cargando persistencia
         $this->load->library('Grocery_CRUD'); //cargando crud
-        $this->load->model("terreno");
+        $this->load->model("lugar");
     }
 
     public function index()
@@ -17,18 +17,19 @@ class Terrenos extends CI_Controller
         $this->load->view('welcome_message');
     }
 
-    public function gestionTerrenos()
+    public function gestionLugares()
     {
         $terrenos = new grocery_CRUD();
-        $terrenos->set_subject('Terrenos');
-        $terrenos->set_table('terrenos'); //estableciendo la tabla de l BDD
+        $terrenos->set_subject('Localidad');
+        $terrenos->set_table('localidades'); //estableciendo la tabla de l BDD
         $terrenos->set_theme('datatables'); //definiendo al aspeto grafico
-        $terrenos->columns('id_ter', 'longitud_ter', 'latitud_ter');
-        $terrenos->display_as('id_ter', '#');
-        $terrenos->display_as('longitud_ter', 'Longitud');
-        $terrenos->display_as('latitud_ter', 'Latitud');
-        $terrenos->fields('longitud_ter', 'latitud_ter');
-        $terrenos->set_relation('id_loc','localidades','terrenos');
+        $terrenos->columns('id_loc', 'provincia_loc', 'canton_loc', 'parroquia_loc', 'barrio_loc');
+        $terrenos->display_as('id_loc', '#');
+        $terrenos->display_as('provincia_loc', 'Provincia');
+        $terrenos->display_as('canton_loc', 'Canton');
+        $terrenos->display_as('parroquia_loc', 'Parroquia');
+        $terrenos->display_as('barrio_loc', 'Barrio');
+        $terrenos->fields('provincia_loc', 'canton_loc', 'parroquia_loc', 'barrio_loc');
         $terrenos->set_language("spanish");
         $terrenos->set_theme("flexigrid");
 
@@ -36,7 +37,7 @@ class Terrenos extends CI_Controller
 
         $output = $terrenos->render();
         $this->load->view('header');
-        $this->load->view('terrenos/index', $output);
+        $this->load->view('lugares/index', $output);
         $this->load->view('footer');
     }
 
